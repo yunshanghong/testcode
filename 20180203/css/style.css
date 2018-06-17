@@ -1,0 +1,266 @@
+/*=============================================
+=                  General                    =
+=============================================*/
+
+/* * {
+    border: 1px solid black;
+} */
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+button:focus {
+    outline: none;
+}
+
+.img-responsive {
+    width: 100%;
+}
+
+/* 設定.img-responsive在手機的版的長相 */
+
+/* width < 576 -> bootsrtap 4 手機版型 */
+
+@media (max-width: 576px) {
+    .img-responsive {
+        width: 50%;
+        /* 將重新定義為區塊元素 */
+        display: block;
+    }
+    /* 選擇id為header內的display-4 */
+    #header .display-4 {
+        font-size: 24px;
+    }
+}
+
+/*=============================================
+=                  Navbar                     =
+=============================================*/
+
+.navbar {
+    box-shadow: 0 3px 18px rgb(0, 0, 0);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+/*=============================================
+=                  Header                     =
+=============================================*/
+
+#header {
+    background-size: cover;
+    padding: 200px 0;
+    position: relative;
+    color: white;
+    background-image: url('../img/headerImage.jpg');
+    background-attachment: fixed;
+}
+
+#header:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+#header .container {
+    z-index: 5;
+    position: relative;
+}
+
+#btnScrollDown {
+    color: white;
+    position: absolute;
+    z-index: 8;
+    bottom: 20px;
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    opacity: .5;
+    cursor: pointer;
+}
+
+#btnScrollDown:hover {
+    opacity: 1;
+}
+
+/*=============================================
+=                  Intro                      =
+=============================================*/
+
+/*=============================================
+=                  Features                   =
+=============================================*/
+
+/*=============================================
+=                  Reviews                    =
+=============================================*/
+
+#carouselImg1 {
+    background-image: url("https://picsum.photos/1200/600?image=1000");
+}
+
+#carouselImg2 {
+    background-image: url("https://picsum.photos/1200/600?image=999");
+}
+
+#carouselImg3 {
+    background-image: url("https://picsum.photos/1200/600?image=888");
+}
+
+#carouselImg4 {
+    background-image: url("https://picsum.photos/1200/600?image=960");
+}
+
+.carousel-inner {
+    margin: 0 auto;
+    width: 80%;
+}
+
+[id^='carouselImg'] {
+    background-size: cover;
+}
+
+#carouselId .carousel-item {
+    padding: 100px;
+}
+
+#reviewsSection .carousel-item {
+    min-height: 450px;
+}
+
+.carousel-indicators li {
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/*=============================================
+=                  Gallery                    =
+=============================================*/
+
+/* TODO: 設定Hover特效 */
+
+/* 屬性選擇器 */
+
+/* class => .
+   id => #
+   attribute =>[]  */
+
+/* ^= 選擇屬性的開頭 
+   $= 選擇屬性的結尾 */
+
+[id^='galleryImage'] {
+    background-size: cover;
+    height: 250px;
+    filter: grayscale(100%);
+    transition: all 2s ease;
+}
+
+[id^='galleryImage']:hover {
+    filter: grayscale(0%);
+    /* transition: all 2s ease; */
+}
+
+[id^='galleryImage']>.galleryText {
+    line-height: 250px;
+    font-size: 6px;
+    color: white;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    text-align: center;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+[id^='galleryImage']:hover>.galleryText {
+    font-size: 22px;
+    opacity: 1;
+}
+
+#galleryImage1 {
+    background-image: url('../img/galleryImage1.jpg');
+}
+
+#galleryImage2 {
+    background-image: url('../img/galleryImage2.jpg');
+}
+
+#galleryImage3 {
+    background-image: url('../img/galleryImage3.jpg');
+}
+
+#galleryImage4 {
+    background-image: url('../img/galleryImage4.jpg');
+}
+
+#galleryImage5 {
+    background-image: url('../img/galleryImage5.jpg');
+}
+
+#galleryImage6 {
+    background-image: url('../img/galleryImage6.jpg');
+}
+
+#galleryImage7 {
+    background-image: url('../img/galleryImage7.jpg');
+}
+
+#galleryImage8 {
+    background-image: url('../img/galleryImage8.jpg');
+}
+
+/*=============================================
+=                  Start Now                  =
+=============================================*/
+
+/*=============================================
+=                   Footer                    =
+=============================================*/
+
+#goBackBtn {
+    color: white;
+    width: 50px;
+    height: 50px;
+    /* position: static, relative, absolute, fixed; 四種定位方式*/
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+    z-index: 1000;
+    /* 讓這個元素在畫面中不存在 */
+    display: none;
+}
+
+/* 放入google map 需要有寬度、高度 */
+
+#map {
+    width: 100%;
+    height: 480px;
+    background-color: gray;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-end p {
+    font-size: 8px;
+    margin: 0;
+}
